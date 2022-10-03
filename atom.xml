@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://even-day.github.io</id>
+    <title>EBLOG</title>
+    <updated>2022-10-03T09:53:20.973Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://even-day.github.io"/>
+    <link rel="self" href="https://even-day.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://even-day.github.io/images/avatar.png</logo>
+    <icon>https://even-day.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, EBLOG</rights>
+    <entry>
+        <title type="html"><![CDATA[nodejs安装]]></title>
+        <id>https://even-day.github.io/post/nodejs-an-zhuang/</id>
+        <link href="https://even-day.github.io/post/nodejs-an-zhuang/">
+        </link>
+        <updated>2022-10-03T08:30:54.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>
+<p><a href="https://nodejs.org/en/download/">下载</a></p>
+</li>
+<li>
+<p>安装过程一直按回车</p>
+</li>
+<li>
+<p>测试是否安装成功</p>
+</li>
+<li>
+<pre><code class="language-bash">node -v
+npm -v
+</code></pre>
+</li>
+</ul>
+<h2 id="修改全局模块路径和缓存路径">修改全局模块路径和缓存路径</h2>
+<p>当我们在执行npm install <a href="https://so.csdn.net/so/search?q=express&amp;spm=1001.2101.3001.7020">express</a> -g命令时，g表示global全局。会默认下载到c盘，c盘一般作为系统盘，尽量把一些程序安装到其他盘，来减少c盘空间的占用</p>
+<p>它的默认路径为：【C:\Users\用户名\AppData\Roaming\npm】</p>
+<ol>
+<li>这里将全局模块（文件夹名：node_global）和缓存（文件夹名：node_cache）放在了nodejs安装目录下，在你的nodejs安装目录下创建创建两个文件夹，名称分别为：node_global和node_cache，在node_global文件夹下再建一个node_modules文件夹，配置环境变量用</li>
+</ol>
+<figure data-type="image" tabindex="1"><img src="https://www.jianguoyun.com/c/dl-file/2022319211634.png?dt=r8zuaz&amp;sd=cyh3m&amp;kv=MjAyMDA3NzkzQHFxLmNvbQ&amp;vr=1&amp;ud=KBHsOq--Pkz5x0O5yEbBPhIKy2PJE0ByTtifssWP620" alt="image-20220319211634324" loading="lazy"></figure>
+<ol start="2">
+<li>
+<p>win+R打开运行窗口，输入cmd，再输入以下两条指令</p>
+<pre><code class="language-bash">npm config set prefix &quot;创建的node_global文件夹所在路径&quot;
+npm config set cache &quot;创建的node_cache文件夹所在路径&quot;
+</code></pre>
+</li>
+<li>
+<p>在nodejs的安装目录下，进入node_modules——&gt;npm——&gt;找到npmrc文件，打开</p>
+<pre><code class="language-bash">添加以下命令：
+prefix=创建的node_global文件夹所在路径
+cache=创建的node_cache文件夹所在路径
+</code></pre>
+</li>
+<li>
+<p>高级系统设置-----环境变量</p>
+</li>
+</ol>
+<blockquote>
+<p>1 在系统变量中，新建，变量名：NODE_PATH 变量值：node_global文件夹下的node_modules文件夹。如：E:\develop\nodejs\node_global\node_modules</p>
+<p>2 修改用户变量中的Path变量，将默认的npm路径修改为新建的node_global路径</p>
+</blockquote>
+<figure data-type="image" tabindex="2"><img src="https://www.jianguoyun.com/c/dl-file/2022319231030.png?dt=r8zzkv&amp;sd=cyh3m&amp;kv=MjAyMDA3NzkzQHFxLmNvbQ&amp;vr=1&amp;ud=5ckVJnrLpG1mgd8iW13qm97rcV9SdvBBw6a_8d1C-Ro" alt="image-20220319231030342" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://even-day.github.io/post/hello-gridea/</id>
+        <link href="https://even-day.github.io/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="https://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
